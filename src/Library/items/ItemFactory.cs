@@ -11,6 +11,8 @@ namespace RoleplayGame.Items
         Darkhold = 4,
         Mjolnour = 5,
         GuanteDePoder = 6,
+        Palo=7,
+        Coraza=8,
     }
 
     /// <summary>
@@ -32,6 +34,8 @@ namespace RoleplayGame.Items
                 case ItemType.Vishanti: return new Vishanti();
                 case ItemType.Darkhold: return new Darkhold();
                 case ItemType.Mjolnour: return new Mjolnour();
+                case ItemType.Palo: return new Palo();
+                case ItemType.Coraza: return new Coraza();
                 case ItemType.GuanteDePoder: return new GuanteDePoder();
 
                 default: return null;
