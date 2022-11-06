@@ -9,10 +9,12 @@ namespace RoleplayGame.Items
         Robes = 2,
         Vishanti = 3,
         Darkhold = 4,
-        Mjolnour = 5,
-        GuanteDePoder = 6,
-        Palo=7,
-        Coraza=8,
+         TablaCosmica = 5,
+        Mjolnir = 6,
+        GuanteDePoder = 7,
+        Palo=8,
+        Coraza=9,
+
     }
 
     /// <summary>
@@ -33,10 +35,11 @@ namespace RoleplayGame.Items
                 case ItemType.Robes: return new Robes();
                 case ItemType.Vishanti: return new Vishanti();
                 case ItemType.Darkhold: return new Darkhold();
-                case ItemType.Mjolnour: return new Mjolnour();
+                case ItemType.Mjolnir: return new Mjolnir();
                 case ItemType.Palo: return new Palo();
                 case ItemType.Coraza: return new Coraza();
                 case ItemType.GuanteDePoder: return new GuanteDePoder();
+                case ItemType.TablaCosmica: return new TablaCosmica();
 
                 default: return null;
             }
