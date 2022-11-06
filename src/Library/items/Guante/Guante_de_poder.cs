@@ -5,16 +5,14 @@ using System;
 public class GuanteDePoder : IAttackItem
 {
     List<IGema> gemas = new List<IGema>();
-    public int Daño{get; set;} = 5;
-    public int AttackPower {get;} 
+    public int AttackPower {get;} = 5;
     public GuanteDePoder()          
     {
         foreach (IGema gema in gemas)
         {
-            Daño=Daño+20;
+            AttackPower=AttackPower+20;
         }
     }
-    
     public void AddGema(IGema gema)
     {
         if (!gemas.Contains(gema))
