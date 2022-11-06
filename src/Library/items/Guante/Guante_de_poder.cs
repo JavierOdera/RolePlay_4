@@ -1,12 +1,13 @@
 namespace RoleplayGame.Items;
 using System.Collections.Generic;
+using System;
 
 public class GuanteDePoder : IAttackItem
 {
     List<IGema> gemas = new List<IGema>();
     public int Daño{get; set;} = 5;
-    public int AttackPower {get;} // ponemos el poder de ataque
-    public GuanteDePoder()          //Al encontrar gemas, debemos verificar que la misma no exista ya en la lista de gemas. Esto lo podriamos hacer en el main?
+    public int AttackPower {get;} 
+    public GuanteDePoder()          
     {
         foreach (IGema gema in gemas)
         {
@@ -19,7 +20,23 @@ public class GuanteDePoder : IAttackItem
         if (!gemas.Contains(gema))
         {
             gemas.Add(gema);
-        }                               //Capaz que podriamos agregar algo que diga que la gema ya esta en el inventario si se da el caso
+        }
+        else
+        {
+            Console.WriteLine("Ya tienes esta gema");
+        }            
+    }
+    public void RemoveGema(IGema gema)
+    {
+        if (gemas.Contains(gema))
+        {
+            gemas.Remove(gema);
+        
+        }
+        else
+        {
+            Console.WriteLine("No tienes esa gema");
+        }
     }
     
     public override string ToString()//ponemos lo que se escribira si llamamos al objeto
