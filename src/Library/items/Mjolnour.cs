@@ -12,6 +12,6 @@ public class Mjolnour : IAttackItem
     
     public override string ToString()//ponemos lo que se escribira si llamamos al objeto
         {
-            return "Robes";
+            return "Mjolnour";
         }
 }
