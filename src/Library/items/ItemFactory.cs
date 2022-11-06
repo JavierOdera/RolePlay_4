@@ -8,6 +8,9 @@ namespace RoleplayGame.Items
         Magic = 1,
         Robes = 2,
         Vishanti = 3,
+        Darkhold = 4,
+        Mjolnour = 5,
+        GuanteDePoder = 6,
     }
 
     /// <summary>
@@ -26,7 +29,10 @@ namespace RoleplayGame.Items
             {
                 case ItemType.Magic: return new Magic();
                 case ItemType.Robes: return new Robes();
-                case ItemType.Vishanti: return new Robes();
+                case ItemType.Vishanti: return new Vishanti();
+                case ItemType.Darkhold: return new Darkhold();
+                case ItemType.Mjolnour: return new Mjolnour();
+                case ItemType.GuanteDePoder: return new GuanteDePoder();
 
                 default: return null;
             }
